@@ -40,4 +40,4 @@ DT <- rbind(cbind_test, cbind_train)
 summarise_DT <- DT %>% group_by(Subject, DescActivity) %>% summarise_each(funs(mean))
 
 ### Create a txt file o summarise_DT
-write.table(summarise_DT, file = "./summarise_DT.txt")
+write.table(summarise_DT, file = "./summarise_DT.txt", row.name = FALSE)
